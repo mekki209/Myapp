@@ -15,15 +15,21 @@ pipeline {
         }
 
 
-stage('build')
-{
-                  steps {
-                         script{
-                         sh "ansible-playbook my-app/Ansible/build.yml -i my-app/Ansible/inventory/host.yml "
-                                }
-                        }
-  }
-
-
-}
-}
+        /*
+        stage('Install') {
+             steps{
+                script{
+                    sh "sudo npm install"
+                }
+            }
+        }
+        */
+        stage('Build') {
+             steps{
+                script{
+                    sh " ansible-playbook MyApp/ansible/build.yml -i MyApp/ansible/inventory/host.yml"
+                }
+            }
+        }
+        }
+        }
