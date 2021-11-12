@@ -5,5 +5,4 @@ localhost
 
 [Server:vars]
 ansible_python_interpreter= /usr/bin/python3
-ansible_user=compute1
-ansible_become_pass=root
+ansible_user= root
