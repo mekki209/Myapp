@@ -6,15 +6,23 @@ pipeline {
               script{
                   checkout([$class: 'GitSCM', branches: [[name: '*/main']],
                        userRemoteConfigs: [[
-                          credentialsId:'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',
+                          credentialsId:'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',
                           url: 'https://github.com/mekki209/Myapp.git']]])
-
 
                      }
 
             }
         }
-}
+
+
+stage('build')
+{
+                  steps {
+                         script{
+                         sh "ansible-playbook my-app/Ansible/build.yml -i my-app/Ansible/inventory/host.yml "
+                                }
+                        }
+  }
 
 
 }
