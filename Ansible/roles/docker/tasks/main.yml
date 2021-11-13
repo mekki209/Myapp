@@ -11,8 +11,8 @@
     force_source: true
 - name: run container docker
   docker_container:
-    name: myapp_container
-    image: First_app:latest
+    name: Myapp_container
+    image: Myapp:latest
     state: started
     recreate: true
     ports:
