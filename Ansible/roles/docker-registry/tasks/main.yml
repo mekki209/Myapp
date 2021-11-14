@@ -10,5 +10,5 @@
   docker_image:
     name: myapp:latest
     repository: mekki209/myapp
-    tag: end 
+    tag: end
     push: yes
